@@ -7,5 +7,12 @@ export default defineConfig(() => {
       outDir: 'build',
     },
     plugins: [react()],
-  };
-});
+    server: {
+      proxy: {
+      '/api/persons': {
+        target: 'http://localhost:3000',
+        changeOrigin: true,
+      },
+    }
+  }
+  }});
