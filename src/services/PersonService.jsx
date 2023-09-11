@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 
 
-const baseUrl = 'http://localhost:3000/api/persons'
+const baseUrl = '/api/persons'
 
   const getAll = () => {
     const request = axios.get(baseUrl)
@@ -11,7 +11,7 @@ const baseUrl = 'http://localhost:3000/api/persons'
 
 const nameTakeOut = (id) => {
 
-  const request = axios.delete(`http://localhost:3000/api/persons/${id}`)
+  const request = axios.delete(`/api/persons/${id}`)
   return request.then(response => response.data)
 }
 
@@ -21,7 +21,7 @@ const create = newPerson => {
 }
 
 const update = (id, newPerson) => {
-  const request = axios.put(`http://localhost:3000/api/persons/${id}`,  newPerson)
+  const request = axios.put(`/api/persons/${id}`,  newPerson)
   return request.then(response => response.data)
 
 }
