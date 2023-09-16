@@ -60,7 +60,7 @@ const AddName = ({
       setNewNumber("");
     } else if (!/^\d{3}-\d{7}$/.test(newNumber)) {
       handleInfoMessageErrorUpdate(
-        "Phone number should be in the format XXX-XXXXXXXXXX"
+        "Phone number should be in the format XXX-XXXXXXX"
       );
     } else {
       const newPerson = {
